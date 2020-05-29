@@ -68,7 +68,7 @@ create table posts
     chat_id int(11) not null,
     post_detail varchar(1000) not null,
     user_id int(11) not null,
-    posted_at datetime not null,
+    created_at datetime not null,
     update_user_id int(11) not null,
     updated_at datetime not null,
     is_deleted tinyint(1) not null default 0,
