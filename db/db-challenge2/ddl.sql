@@ -2,7 +2,7 @@ create table users
 (
     user_id int(11) not null auto_increment,
     email varchar(100) not null,
-    pass_word varchar(100) not null,
+    password varchar(100) not null,
     user_name varchar(100) not null,
     self_info varchar(1000),
     company_phone varchar(12),
