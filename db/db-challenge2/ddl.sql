@@ -18,8 +18,8 @@ create table users
 create table chat_rooms
 (
     id int(11) not null auto_increment,
-    chat_name varchar(100) not null, 
-    chat_detail varchar(1000),
+    name varchar(100) not null, 
+    detail varchar(1000),
     is_sent tinyint(1) not null default 0,
     is_directed tinyint(1) not null default 0,
     is_deleted tinyint(1) not null default 0, 
@@ -46,7 +46,7 @@ create table tasks
 (
     id int(11) auto_increment not null,
     chat_id int(11) not null,
-    task_detail varchar(1000) not null,
+    detail varchar(1000) not null,
     user_id int(11) not null,
     limited_time datetime not null,
     is_completed tinyint(1) not null default 0,
@@ -66,7 +66,7 @@ create table posts
 (
     id int(11) auto_increment not null,
     chat_id int(11) not null,
-    post_detail varchar(1000) not null,
+    detail varchar(1000) not null,
     user_id int(11) not null,
     created_at datetime not null,
     update_user_id int(11) not null,
