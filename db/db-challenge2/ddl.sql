@@ -12,7 +12,7 @@ create table users
     created_at datetime not null,
     update_user_id int(11) not null,
     updated_at datetime not null,
-    primary key(user_id)
+    primary key(id)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 create table chat_rooms
@@ -29,7 +29,7 @@ create table chat_rooms
     updated_at datetime not null,
     foreign key(create_user_id) references users(id),
     foreign key(update_user_id) references users(id),
-    primary key(chat_id)
+    primary key(id)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 create table chat_members
@@ -39,7 +39,7 @@ create table chat_members
     join_time datetime not null,
     foreign key(chat_id) references chat_rooms(id),
     foreign key(user_id) references users(id),
-    primary key(chat_id, id)
+    primary key(chat_id, user_id)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 create table tasks
@@ -59,7 +59,7 @@ create table tasks
     foreign key(user_id) references users(id),
     foreign key(create_user_id) references users(id),
     foreign key(update_user_id) references users(id),
-    primary key(task_id)
+    primary key(id)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 create table posts
@@ -76,5 +76,5 @@ create table posts
     foreign key(chat_id) references chat_rooms(id),
     foreign key(user_id) references users(id),
     foreign key(update_user_id) references users(id),
-    primary key(post_id)    
+    primary key(id)    
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
