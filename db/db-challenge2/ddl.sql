@@ -4,7 +4,7 @@ create table users
     email varchar(100) not null,
     password varchar(100) not null,
     user_name varchar(100) not null,
-    self_info varchar(1000),
+    self_intro varchar(1000),
     company_phone varchar(12),
     cell_phone varchar(13),
     is_deleted tinyint(1) not null default 0,
