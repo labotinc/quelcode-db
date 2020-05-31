@@ -20,7 +20,7 @@ create table chat_rooms
     id int(11) not null auto_increment,
     name varchar(100) not null, 
     detail varchar(1000),
-    is_sent tinyint(1) not null default 0,
+    is_sent tinyint(1) not null default 1,
     is_directed tinyint(1) not null default 0,
     is_deleted tinyint(1) not null default 0, 
     create_user_id int(11) not null,
