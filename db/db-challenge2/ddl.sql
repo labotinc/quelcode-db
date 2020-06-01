@@ -27,8 +27,8 @@ create table chat_rooms
     created_at datetime not null,
     update_user_id int(11) not null,
     updated_at datetime not null,
-    foreign key(create_user_id) references users(id) on delete cascade on update cascade,
-    foreign key(update_user_id) references users(id) on delete cascade on update cascade,
+    foreign key(create_user_id) references users(id),
+    foreign key(update_user_id) references users(id),
     primary key(id)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
@@ -37,8 +37,8 @@ create table chat_members
     chat_id int(11) not null,
     user_id int(11) not null,
     join_time datetime not null,
-    foreign key(chat_id) references chat_rooms(id) on delete cascade on update cascade,
-    foreign key(user_id) references users(id) on delete cascade on update cascade,
+    foreign key(chat_id) references chat_rooms(id),
+    foreign key(user_id) references users(id),
     primary key(chat_id, user_id)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
@@ -55,10 +55,10 @@ create table tasks
     update_user_id int(11) not null,
     updated_at datetime not null,
     is_deleted tinyint(1) not null default 0,
-    foreign key(chat_id) references chat_rooms(id) on delete cascade on update cascade,
-    foreign key(user_id) references users(id) on delete cascade on update cascade,
-    foreign key(create_user_id) references users(id) on delete cascade on update cascade,
-    foreign key(update_user_id) references users(id) on delete cascade on update cascade,
+    foreign key(chat_id) references chat_rooms(id),
+    foreign key(user_id) references users(id),
+    foreign key(create_user_id) references users(id),
+    foreign key(update_user_id) references users(id),
     primary key(id)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
@@ -73,8 +73,8 @@ create table posts
     updated_at datetime not null,
     is_deleted tinyint(1) not null default 0,
     added_file varchar(100) not null,
-    foreign key(chat_id) references chat_rooms(id) on delete cascade on update cascade,
-    foreign key(user_id) references users(id) on delete cascade on update cascade,
-    foreign key(update_user_id) references users(id) on delete cascade on update cascade,
+    foreign key(chat_id) references chat_rooms(id),
+    foreign key(user_id) references users(id),
+    foreign key(update_user_id) references users(id),
     primary key(id)    
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8;
