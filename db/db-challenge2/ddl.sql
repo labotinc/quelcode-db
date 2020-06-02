@@ -72,7 +72,7 @@ create table posts
     update_user_id int(11) not null,
     updated_at datetime not null,
     is_deleted tinyint(1) not null default 0,
-    added_file varchar(100) not null,
+    added_file varchar(100),
     foreign key(chat_id) references chat_rooms(id),
     foreign key(user_id) references users(id),
     foreign key(update_user_id) references users(id),
