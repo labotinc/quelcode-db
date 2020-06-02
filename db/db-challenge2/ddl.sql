@@ -48,7 +48,7 @@ create table tasks
     chat_id int(11) not null,
     detail varchar(1000) not null,
     user_id int(11) not null,
-    limited_time datetime not null,
+    limited_time datetime,
     is_completed tinyint(1) not null default 0,
     create_user_id int(11) not null,
     created_at datetime not null,
