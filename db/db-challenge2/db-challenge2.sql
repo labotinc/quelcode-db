@@ -6,15 +6,32 @@ CREATE TABLE `user_information` (
     `profile` varchar(1000),
     `workplace_phone_number` varchar(13) UNIQUE,
     `myphone_number` varchar(13),
-    `account_delete_flag` tinyint,
+    `account_delete_flag` tinyint(1),
+    `create_date_and_time` datetime NOt NULL,
+    `update_date_and_time`datetime NOt NULL
+);
+
+CREATE TABLE `chatroom` (
+    `chatroom_id` int(11) PRIMARY KEY AUTO_INCREMENT,
+    `chatroom_name` varchar(100) NOT NULL,
+    `chatroom_overview` varchar(1000),
+    `file_transmission_flag` tinyint(1) NOT NULL,
+    `direct_chat_flag` tinyint(1) NOT NULL,
+    `chatroom_delete_flag` tinyint(1) NOT NULL,
+    `create_author` int(11) NOT NULL REFERENCES user_information(id),
+    `update_author` int(11) NOT NULL REFERENCES user_information(id),
     `create_date_and_time` datetime NOt NULL,
     `update_date_and_time`datetime NOt NULL
 );
 
 CREATE TABLE `participant` (
-    `id` int(11) AUTO_INCREMENT,
-    `chatroom_id` varchar(100) NOT NULL UNIQUE,
+    `id` int(11) AUTO_INCREMENT REFERENCES user_information(id),
+    `chatroom_id` varchar(100) NOT NULL UNIQUE REFERENCES chatroom(chatroom_id),
     `participation_date` varchar(100) NOT NULL,
     PRIMARY KEY (`id`,`chatroom_id`)
 );
+
+
+
+
 
