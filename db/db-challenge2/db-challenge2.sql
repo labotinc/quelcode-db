@@ -7,8 +7,8 @@ CREATE TABLE `user_information` (
     `workplace_phone_number` varchar(13) UNIQUE,
     `myphone_number` varchar(13),
     `account_delete_flag` tinyint(1),
-    `create_date_and_time` datetime NOt NULL,
-    `update_date_and_time`datetime NOt NULL
+    `create_date_and_time` datetime NOT NULL,
+    `update_date_and_time`datetime NOT NULL
 );
 
 CREATE TABLE `chatroom` (
@@ -20,8 +20,8 @@ CREATE TABLE `chatroom` (
     `chatroom_delete_flag` tinyint(1) NOT NULL,
     `create_author` int(11) NOT NULL REFERENCES user_information(id),
     `update_author` int(11) NOT NULL REFERENCES user_information(id),
-    `create_date_and_time` datetime NOt NULL,
-    `update_date_and_time`datetime NOt NULL
+    `create_date_and_time` datetime NOT NULL,
+    `update_date_and_time`datetime NOT NULL
 );
 
 CREATE TABLE `participant` (
@@ -31,7 +31,15 @@ CREATE TABLE `participant` (
     PRIMARY KEY (`id`,`chatroom_id`)
 );
 
-
-
-
+CREATE TABLE `posts` (
+    `post_id` int(11) PRIMARY KEY AUTO_INCREMENT,
+    `chatroom_id` int(11) REFERENCES chatroom(chatroom_id) NOT NULL,
+    `post_content` varchar(1000) NOT NULL,
+    `file_name` varchar(100),
+    `post_content_delete_flag` tinyint(1) NOT NULL DEFAULT '0',
+    `create_author` int(11) NOT NULL REFERENCES user_information(id),
+    `update_author` int(11) NOT NULL REFERENCES user_information(id),
+    `create_date_and_time` datetime NOT NULL,
+    `update_date_and_time`datetime NOT NULL
+);
 
