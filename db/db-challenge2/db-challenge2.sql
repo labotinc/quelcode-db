@@ -43,3 +43,14 @@ CREATE TABLE `posts` (
     `update_date_and_time`datetime NOT NULL
 );
 
+CREATE TABLE `task` (
+    `post_id` int(11) PRIMARY KEY AUTO_INCREMENT,
+    `chatroom_id` int(11) REFERENCES chatroom(chatroom_id) NOT NULL,
+    `post_content` varchar(1000) NOT NULL,
+    `file_name` varchar(100),
+    `task_delete_flag` tinyint(1) NOT NULL DEFAULT '0',
+    `create_author` int(11) NOT NULL REFERENCES user_information(id),
+    `update_author` int(11) NOT NULL REFERENCES user_information(id),
+    `create_date_and_time` datetime NOT NULL,
+    `update_date_and_time`datetime NOT NULL
+);
