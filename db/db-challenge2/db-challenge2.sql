@@ -33,7 +33,7 @@ CREATE TABLE `participant` (
 
 CREATE TABLE `posts` (
     `post_id` int(11) PRIMARY KEY AUTO_INCREMENT,
-    `chatroom_id` int(11) REFERENCES chatroom(chatroom_id) NOT NULL,
+    `chatroom_id` int(11) NOT NULL REFERENCES chatroom(chatroom_id),
     `post_content` varchar(1000) NOT NULL,
     `file_name` varchar(100),
     `post_content_delete_flag` tinyint(1) NOT NULL DEFAULT '0',
@@ -45,7 +45,7 @@ CREATE TABLE `posts` (
 
 CREATE TABLE `task` (
     `task_id` int(11) PRIMARY KEY AUTO_INCREMENT,
-    `chatroom_id` int(11) REFERENCES chatroom(chatroom_id) NOT NULL,
+    `chatroom_id` int(11) NOT NULL REFERENCES chatroom(chatroom_id),
     `task_content` varchar(1000) NOT NULL,
     `person_in_charge_id` int(11),
     `deadline` datetime(1) NOT NULL DEFAULT '0',
