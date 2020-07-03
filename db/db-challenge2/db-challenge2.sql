@@ -11,4 +11,10 @@ CREATE TABLE `user_information` (
     `update_date_and_time`datetime NOt NULL
 );
 
+CREATE TABLE `participant` (
+    `id` int(11) AUTO_INCREMENT,
+    `chatroom_id` varchar(100) NOT NULL UNIQUE,
+    `participation_date` varchar(100) NOT NULL,
+    PRIMARY KEY (`id`,`chatroom_id`)
+);
 
