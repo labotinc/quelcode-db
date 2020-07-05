@@ -26,8 +26,8 @@ CREATE TABLE `chatroom` (
 
 CREATE TABLE `participant` (
     `user_id` int(11) REFERENCES user_information(id),
-    `chatroom_id` varchar(100) REFERENCES chatroom(chatroom_id),
-    `participation_date` varchar(100) NOT NULL,
+    `chatroom_id` int(11) REFERENCES chatroom(id),
+    `participation_date` datetime NOT NULL,
     PRIMARY KEY (`id`,`chatroom_id`)
 );
 
