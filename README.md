@@ -1,6 +1,6 @@
 # 物理設計とDDL文の作成
 
-- [要件定義]()を元にDB定義書とDDL文を作成
+- [要件定義](https://docs.google.com/document/d/1z49RCAEeJaD6HiZM_ZCKujJkhYyYjo9ZGP8SQb8aXU0/edit)を元にDB定義書とDDL文を作成
 
 ## ディレクトリ解説
 
