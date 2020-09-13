@@ -23,3 +23,5 @@ MySQLバージョン 5.7.x
 Dockerを立ち上げた後以下のアドレスにアクセスする
 
 http://localhost:10081
+
+gitとの接続確認
