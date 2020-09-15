@@ -1,14 +1,14 @@
-<mxfile host="b19cd3b8-52fe-4cd8-9e69-84327bdf1286" modified="2020-09-15T05:39:49.919Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.0 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="kId8XVzd3I1Fx80QRRft" version="13.1.3">
+<mxfile host="b19cd3b8-52fe-4cd8-9e69-84327bdf1286" modified="2020-09-15T05:54:05.296Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.48.0 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36" etag="1sLOMQKJaeB1zsWZBa2g" version="13.1.3">
     <diagram id="6hGFLwfOUW9BJ-s0fimq" name="Page-1">
         <mxGraphModel dx="838" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="6" value="タスクID" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=0;" vertex="1" parent="1">
-                    <mxGeometry x="590" y="340" width="160" height="160" as="geometry"/>
+                    <mxGeometry x="590" y="340" width="160" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="タスク内容&#10;タスク担当者ID（FK）&#10;期限&#10;論理削除フラグ&#10;作成日時&#10;作成者（FK）&#10;更新日時&#10;更新者（FK）&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="6">
-                    <mxGeometry y="30" width="160" height="130" as="geometry"/>
+                <mxCell id="7" value="タスク内容&#10;タスク担当者ID（FK）&#10;期限&#10;進捗&#10;論理削除フラグ&#10;作成日時&#10;作成者（FK）&#10;更新日時&#10;更新者（FK）&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="6">
+                    <mxGeometry y="30" width="160" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="ユーザーID (FK)&#10;タスクID (FK)" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=120;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=0;" vertex="1" parent="1">
                     <mxGeometry x="590" y="220" width="156" height="60" as="geometry"/>
