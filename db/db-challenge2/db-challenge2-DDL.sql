@@ -3,7 +3,7 @@ CREATE TABLE `users` (
       `mail` varchar(100) NOT NULL,
       `password` varchar(100) NOT NULL,
       `name` varchar(100) NOT NULL,
-      `self-introduction` varchar(1000),
+      `self_introduction` varchar(1000),
       `number_work` varchar(13),
       `number_private` varchar(13),
       `is_deleted` tinyint(1) DEFAULT 0 NOT NULL comment'1:削除済み',
