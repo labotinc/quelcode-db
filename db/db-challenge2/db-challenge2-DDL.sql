@@ -36,7 +36,6 @@ CREATE TABLE `chats` (
 CREATE TABLE `posts` (
       `id` int NOT NULL AUTO_INCREMENT,
       `chat_id` int NOT NULL REFERENCES chats(ID),
-      `user_id` int NOT NULL REFERENCES users(ID),
       `contents` varchar(1000) NOT NULL,
       `file_name` varchar(100),
       `is_deleted` tinyint(1) DEFAULT 0 NOT NULL comment'1:削除済み',
